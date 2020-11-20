@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Router } from 'react-router-dom'
+
+import './config/ReactotronConfig'
+// import GlobalStyle from './styles/global';
+
+import Routes from './routes/Routes';
+import history from './services/history';
+
+import {AuthProvider} from './contexts/Auth';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AuthProvider>
+      <Router history={history} >
+        <Routes />
+        {/* <GlobalStyle /> */}
+      </Router>
+    </AuthProvider> 
+   
   );
 }
 

@@ -12,8 +12,8 @@ export function AuthProvider({children}){
         tipo_usuario: 'secretaria',
       });
     const [token, setToken] = useState(null); 
-    const [tipo_usuario] = useState(''); 
-    const [signed, setSigned] = useState(false);
+    const [tipo_usuario, setTipo_usuario] = useState('paciente'); 
+    const [signed, setSigned] = useState(true);
 
     async function AuthLogin(email, password){
         // const {} = await signIn();
@@ -21,7 +21,7 @@ export function AuthProvider({children}){
         // setToken('ahuahuaksdgajshg');
         // setUser(user);
         // setTipo_usuario(user.tipo_usuario);
-        // setTipo_usuario('paciente');
+        setTipo_usuario('paciente');
                
     }
 

@@ -4,19 +4,18 @@ import AuthContext from '../contexts/Auth';
 
 //pages
 import Appauth from './App.Auth.Routes';
-// import AppPaciente from './App.Paciente.Routes';
+import AppPaciente from './App.Paciente.Routes';
 // import AppSecretaria from './App.Secretaria.Routes';
 // import AppMedico from './App.Medico.Routes';
 
 
 export default function Router() {
-    // const {signed, tipo_usuario} = useContext(AuthContext);
-    const {signed} = useContext(AuthContext);
+    const {signed, tipo_usuario} = useContext(AuthContext);
     let history = useHistory();
-    // if(signed === true && tipo_usuario === 'paciente' ){
-    //     history.push("/agendamento_Consulta");
-    //     return <AppPaciente />
-    // }
+    if(signed === true && tipo_usuario === 'paciente' ){
+        history.push("/dashboard_Paciente");
+        return <AppPaciente />
+    }
     // if(signed === true && tipo_usuario === 'secretaria' ){
     //     history.push("/dashboard_secretaria");
     //     return <AppSecretaria />

@@ -5,8 +5,9 @@ export const Container = styled.div`
   flex: 1;
   flex-direction: row;
   background: rgba(	238, 65, 49, 0.6);
-  height: 100%;
-  width: 100%;
+  height: 98%;
+  width: 99%;
+  position: absolute;
 `;
 
 export const Imagem = styled.img`
@@ -15,8 +16,8 @@ export const Imagem = styled.img`
 `;
 
 export const LogoImg = styled.img`
-    margin-left: 33%;
-    margin-top: 13%;
+    margin-left: 30%;
+    margin-top: 5%;
 `;
 
 export const DivInput = styled.div`
@@ -26,13 +27,13 @@ export const DivInput = styled.div`
     margin-top: 3%;
     margin-left: 10%;
     width: 23%;
-    height: 85%;
+    height: 83%;
     border-radius: 30px;
 
     Form{
         display: flex;
         flex-direction: column;
-        color: rgba(0,0,0,0.7);
+        color: rgba(0,0,0,0.6);
 
     }
 

@@ -56,16 +56,10 @@ export default function Dashboard() {
           <BtnMenuAgenda>
             <Link to={"/agenda_medico"}>Agendas</Link>
           </BtnMenuAgenda>
-          <BtnMenuRedeCredenciada>
-            <Link to={"/"}>Rede Credenciada</Link>
-          </BtnMenuRedeCredenciada>
-          <BtnMenuConsulta>
-            <Link to={"/"}>Agendar Consulta</Link>
-          </BtnMenuConsulta>
           <BtnMenuSair>
             <Link to={"/signin"}>Sair</Link>
           </BtnMenuSair>
-      </MenuDiv>
+        </MenuDiv>
 
         <WelcomeDiv>
           <h2>Bem Vindo(a) {user.nome}</h2>

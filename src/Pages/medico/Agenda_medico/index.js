@@ -98,26 +98,20 @@ export default function Agenda_medica() {
   return (
     <Container>
       <HeaderDiv>
-        <Link to={"/dashboard_secretaria"} >
+        <Link to={"/dashboard_Medico"} >
           <Logo src={logo} />
         </Link>
-        <UserNameLink href={"/dashboard_secretaria"}>{user.nome}</UserNameLink>
+        <UserNameLink href={"/dashboard_Medico"}>{user.nome}</UserNameLink>
       </HeaderDiv>
 
       <BodyDiv>
         <MenuDiv>
           <BtnMenuHome>
-            <Link to={"/dashboard_secretaria"}>Dashboard</Link>
+            <Link to={"/dashboard_Medico"}>Dashboard</Link>
           </BtnMenuHome>
           <BtnMenuAgenda>
-            <Link to={"/agenda_medica"}>Agendas</Link>
+            <Link to={"/agenda_medico"}>Agendas</Link>
           </BtnMenuAgenda>
-          <BtnMenuRedeCredenciada>
-            <Link to={"/rede_Credenciada"}>Rede Credenciada</Link>
-          </BtnMenuRedeCredenciada>
-          <BtnMenuConsulta>
-            <Link to={"/agenda_medica"}>Agendar Consulta</Link>
-          </BtnMenuConsulta>
           <BtnMenuSair>
             <Link to={"/signin"}>Sair</Link>
           </BtnMenuSair>
@@ -143,7 +137,7 @@ export default function Agenda_medica() {
                   <Time key={time.time} past={time.past} available={!time.appointment}>
                     <strong>{time.time}</strong>
                     <span>{time.appointment ? time.appointment.nome : 'em aberto'}</span>
-                    <button onClick={() => history.push(`/agendar_Consulta`)}>{time.appointment ? null : 'Confirmar Atendimento'}</button>
+                    <button onClick={() => history.push(`/agenda_medico`)}>{time.appointment ? null : 'Confirmar Atendimento'}</button>
 
                   </Time>
                 ))

@@ -21,6 +21,7 @@ export const UserNameLink = styled.a`
     margin-top: 3%;
     position: absolute;
     color: #EE4131;
+    text-decoration: none;
 `;
 
 export const BodyDiv = styled.div`

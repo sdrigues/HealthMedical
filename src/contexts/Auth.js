@@ -12,7 +12,7 @@ export function AuthProvider({children}){
         tipo_usuario: 'secretaria',
       });
     const [token, setToken] = useState(null); 
-    const [tipo_usuario, setTipo_usuario] = useState('secretaria'); 
+    const [tipo_usuario, setTipo_usuario] = useState('medico'); 
     const [signed, setSigned] = useState(true);
 
     async function AuthLogin(email, password){
@@ -21,7 +21,7 @@ export function AuthProvider({children}){
         // setToken('ahuahuaksdgajshg');
         // setUser(user);
         // setTipo_usuario(user.tipo_usuario);
-        setTipo_usuario('secretaria');
+        setTipo_usuario('medico');
                
     }
 

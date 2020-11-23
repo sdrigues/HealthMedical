@@ -6,7 +6,7 @@ import AuthContext from '../contexts/Auth';
 import Appauth from './App.Auth.Routes';
 import AppPaciente from './App.Paciente.Routes';
 import AppSecretaria from './App.Secretaria.Routes';
-// import AppMedico from './App.Medico.Routes';
+import AppMedico from './App.Medico.Routes';
 
 
 export default function Router() {
@@ -20,10 +20,10 @@ export default function Router() {
         history.push("/dashboard_secretaria");
         return <AppSecretaria />
     } 
-    // if(signed === true && tipo_usuario === 'medico' ){
-    //     history.push("/dashboard_Medico");
-    //     return <AppMedico />
-    // }
+    if(signed === true && tipo_usuario === 'medico' ){
+        history.push("/dashboard_Medico");
+        return <AppMedico />
+    }
     if(signed === false){
         history.push("/");
         return <Appauth />
